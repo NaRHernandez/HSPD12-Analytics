@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
 const admin = require('firebase-admin');
-const serviceAccount = require('../service-account-hspd12-dev.json');
+// const serviceAccount = require('../service-account-hspd12-dev.json');
+const serviceAccount = process.env.serviceAccount;
 const cors = require('cors');
 var app = express();
 
