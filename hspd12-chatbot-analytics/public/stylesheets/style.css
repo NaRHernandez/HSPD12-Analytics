@@ -1,0 +1,43 @@
+.metric-line{
+  margin-bottom: .2rem;
+  border-bottom: 1px solid lightgray;
+  font-weight:500;
+}
+
+span{
+  font-weight: normal;
+}
+
+.navbar{
+  background-color: #86bc25;
+}
+
+.card{
+  box-shadow: 5px 5px 5px lightgray;
+  margin-top: 1rem;
+}
+
+.sub-metric-line{
+  margin-bottom: .2rem;
+}
+
+.sub-metric-area{
+  margin-bottom: .7rem;
+}
+
+.search-result-line{
+  margin-top: .7rem;
+  margin-bottom: 0;
+}
+
+#search-term{
+  font-weight: 500;
+}
+
+.invalid-form{
+  border-color: red;
+}
+
+.invalid-sub-line{
+  color: red;
+}
