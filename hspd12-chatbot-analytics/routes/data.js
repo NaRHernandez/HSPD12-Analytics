@@ -13,7 +13,7 @@ let logs2 = [];
 
 const { initializeApp, applicationDefault, cert } = require('firebase-admin/app');
 const { getFirestore, Timestamp, FieldValue } = require('firebase-admin/firestore');
-const admin = require('firebase-admin');
+// const admin = require('firebase-admin');
 
 initializeApp();
 
