@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const admin = require('firebase-admin');
 // const serviceAccount = require('../service-account-hspd12-dev.json');
-const serviceAccount = process.env.serviceAccount;
+// const serviceAccount = process.env.serviceAccount;
 const cors = require('cors');
 var app = express();
 
@@ -11,11 +11,19 @@ app.use(cors());
 let logs = [];
 let logs2 = [];
 
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount)
-});
+const { initializeApp, applicationDefault, cert } = require('firebase-admin/app');
+const { getFirestore, Timestamp, FieldValue } = require('firebase-admin/firestore');
+const admin = require('firebase-admin');
 
-const db = admin.firestore();
+initializeApp();
+
+const db = getFirestore().collection('logs'); 
+
+// admin.initializeApp({
+//   credential: admin.credential.cert(serviceAccount)
+// });
+
+// const db = admin.firestore();
 
 function addToArray(dataPiece) {
   logs.push(dataPiece);
