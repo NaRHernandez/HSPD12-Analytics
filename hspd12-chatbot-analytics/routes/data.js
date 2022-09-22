@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
-const admin = require('firebase-admin');
+// const admin = require('firebase-admin');
+const Firestore = require('@google-cloud/firestore');
 // const serviceAccount = require('../service-account-hspd12-dev.json');
 // const serviceAccount = process.env.serviceAccount;
 const cors = require('cors');
@@ -11,13 +12,14 @@ app.use(cors());
 let logs = [];
 let logs2 = [];
 
-const { initializeApp, applicationDefault, cert } = require('firebase-admin/app');
-const { getFirestore, Timestamp, FieldValue } = require('firebase-admin/firestore');
+// const { initializeApp, applicationDefault, cert } = require('firebase-admin/app');
+// const { getFirestore, Timestamp, FieldValue } = require('firebase-admin/firestore');
 // const admin = require('firebase-admin');
 
-initializeApp();
+// initializeApp();
 
-const db = getFirestore().collection('logs'); 
+// const db = getFirestore().collection('logs'); 
+const db = new Firestore();
 
 // admin.initializeApp({
 //   credential: admin.credential.cert(serviceAccount)

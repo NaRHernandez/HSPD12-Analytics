@@ -10,6 +10,7 @@
     "cors": "^2.8.5",
     "debug": "~2.6.9",
     "express": "~4.16.1",
+    "@google-cloud/firestore": "6.2.0",
     "firebase-admin": "^10.0.2",
     "morgan": "~1.9.1"
   }
